@@ -1,0 +1,71 @@
+/* Estilos básicos e responsivos para o jogo da velha */
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --accent:#06b6d4;
+  --muted:#94a3b8;
+  --win:#16a34a;
+  --loss:#ef4444;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial;
+  background:linear-gradient(180deg,#071021 0%, #071826 100%);
+  color:#e6eef6;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+}
+.app{
+  width:100%;
+  max-width:520px;
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.12));
+  border-radius:12px;
+  padding:20px;
+  box-shadow:0 6px 30px rgba(2,6,23,0.6);
+}
+h1{margin:0 0 14px 0;text-align:center;font-size:1.6rem}
+.board-area{display:flex;flex-direction:column;gap:12px;align-items:center}
+.status{font-weight:600;color:var(--muted)}
+.board{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:8px;
+  width:100%;
+  max-width:360px;
+}
+.cell{
+  background:rgba(255,255,255,0.03);
+  aspect-ratio:1/1;
+  border-radius:8px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:2.6rem;
+  cursor:pointer;
+  user-select:none;
+  transition:transform .08s ease, background .12s ease, box-shadow .12s ease;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.02);
+}
+.cell:hover{transform:translateY(-4px)}
+.cell.filled{color:var(--accent);font-weight:700}
+.cell.win{background:linear-gradient(90deg, rgba(22,163,74,0.12), rgba(6,182,212,0.06));box-shadow:0 6px 20px rgba(6,182,212,0.08)}
+.controls{display:flex;gap:8px;align-items:center}
+button#restart{
+  background:transparent;
+  border:1px solid rgba(255,255,255,0.08);
+  color:var(--muted);
+  padding:8px 12px;
+  border-radius:8px;
+  cursor:pointer;
+}
+button#restart:hover{background:rgba(255,255,255,0.02)}
+.credits{margin-top:14px;text-align:center;font-size:.9rem;color:var(--muted)}
+
+@media (max-width:420px){
+  .cell{font-size:2rem}
+  .app{padding:14px}
+}

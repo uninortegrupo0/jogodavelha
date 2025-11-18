@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jogo da Velha</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>Jogo da Velha</h1>
+
+      <section class="board-area">
+        <div id="status" class="status">Vez: X</div>
+        <div class="board" role="grid" aria-label="Tabuleiro do jogo da velha">
+          <div class="cell" data-index="0" role="button" tabindex="0"></div>
+          <div class="cell" data-index="1" role="button" tabindex="0"></div>
+          <div class="cell" data-index="2" role="button" tabindex="0"></div>
+          <div class="cell" data-index="3" role="button" tabindex="0"></div>
+          <div class="cell" data-index="4" role="button" tabindex="0"></div>
+          <div class="cell" data-index="5" role="button" tabindex="0"></div>
+          <div class="cell" data-index="6" role="button" tabindex="0"></div>
+          <div class="cell" data-index="7" role="button" tabindex="0"></div>
+          <div class="cell" data-index="8" role="button" tabindex="0"></div>
+        </div>
+        <div class="controls">
+          <button id="restart">Reiniciar</button>
+        </div>
+      </section>
+
+      <footer class="credits">Feito com ♥ — jogo simples em HTML/CSS/JS</footer>
+    </main>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
